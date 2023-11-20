@@ -71,4 +71,3 @@ Izmaiņas saglabā savā repozitorijā (Commit changes).
 # Piemēri no Gravity Falls
 ![Gravity Falls](http://themysteryofgravityfalls.com/images/credits/001.jpg "Gravity Falls") 
 ![Gravity Falls](http://themysteryofgravityfalls.com/images/credits/004.jpg "Gravity Falls")   
-![Gravity Falls](http://themysteryofgravityfalls.com/images/credits/011.jpg "Gravity Falls")  
