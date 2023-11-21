@@ -1,22 +1,22 @@
-a = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-def e(t, o):
-  r = ""
-  for c in t:
-    if (a.find(c) == -1):
-      r += c
+def encrypt(text, offset):
+  result = ""
+  for character in text:
+    if (ALPHABET.find(character) == -1):
+      result += character
     else:
-      r += (a[(a.find(c) + o) % len(a)])
-  return r
+      result += (ALPHABET[(ALPHABET.find(character) + offset) % len(ALPHABET)])
+  return result
 
-def d(t, o):
-  r = ""
-  for c in t:
-    if (a.find(c) == -1):
-      r += c
+def decrypt(text, offset):
+  result = ""
+  for character in text:
+    if (ALPHABET.find(character) == -1):
+      result += character
     else:
-      r += (a[(a.find(c) - o) % len(a)])
-  return r
+      result += (ALPHABET[(ALPHABET.find(character) - offset) % len(ALPHABET)])
+  return result
 
 w = """
 1. Encrypt text
@@ -28,11 +28,11 @@ mode = int(input(w))
 if mode == 1:
   text = input("Enter the text: ")
   rotation = int(input("Enter the rotation: "))
-  print("Encrypted: " + e(text, rotation))
+  print("Encrypted: " + encrypt(text, rotation))
 elif mode == 2:
   text = input("Enter the text: ")
   rotation = int(input("Enter the rotation: "))
-  print("Decrypted: " + d(text, rotation))
+  print("Decrypted: " + decrypt(text, rotation))
 elif mode == 3:
   print("Bruteforcing...")
   print("But I don't know how to do it, sorry ¯\_(ツ)_/¯")
